@@ -1,0 +1,24 @@
+untilbit commented on Feb 11, 2019
+@hansprueller
+
+Do the following:
+
+# 1. Uninstall plugin:
+
+npm uninstall @ionic-native/file
+ionic cordova plugin rm cordova-plugin-file
+
+# 2. Install again:
+
+ionic cordova plugin add cordova-plugin-file
+npm install @ionic-native/file
+
+# 3. Go to AppModule or the module where you want to import it and add
+
+import { File } from '@ionic-native/file/ngx';
+
+# 4. Add it to your providers
+
+ providers: [  File  ]
+
+# 5. Go to your component / page and use it
